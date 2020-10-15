@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__image {
+    margin: 20px;
+  }
+
+  &__content {
+    & > * {
+      margin: 5px;
+    }
+
+    & > :last-child {
+      cursor: pointer;
+    }
+
+    & > :first-child {
+      text-transform: uppercase;
+    }
+  }
+
+  &__link {
+    color: $grey;
+  }
+}
+
+@media (max-width: $phone-break-point) {
+  .row {
+    max-width: 250px;
+    margin: auto;
+
+    &__container {
+      flex-direction: column;
+    }
+  }
+}
