@@ -7,7 +7,7 @@ function Error() {
   return (
     <Modal
       trigger={getLoadingError.lenght > 0}
-      header="Error!"
+      header="Error"
       content={getLoadingError}
       actions={["Ok"]}
     />
